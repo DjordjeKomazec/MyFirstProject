@@ -1,0 +1,882 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	margin: 0;
+	padding: 0;
+}
+h1 {
+	margin-top: 0;
+	margin-bottom: 90px;
+	font-size: 35px;
+	font-family: 'Merriweather', serif;
+}
+h2 {
+	font-size: 28px;
+	font-family: 'Merriweather', serif;
+}
+p {
+	font-size: 20px;
+	font-family: 'Lato', sans-serif;
+	text-align: justify;
+}
+img {
+	vertical-align: bottom;
+}
+.wrapper {
+	width: 1200px;
+	margin: 0 auto;
+	padding: 150px 30px;
+	background: rgba(255,255,255,1);
+	box-sizing: padding-box;
+}
+.wrapper2 {
+	width: 1200px;
+	margin: 0 auto;
+}
+#bg-image {
+	background-image: url(../slike/44.jpg);
+	background-attachment: fixed;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	z-index: -100;
+}	
+	
+
+	
+/* video stilizovanje */
+	
+#wrap {
+	z-index: -1000;
+		
+}
+#wrap video {
+	min-height: 100%;
+	min-width: 100%;
+	vertical-align: bottom;
+}
+	
+	
+	
+/* header stilizovanje */
+	
+#header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(251,251,251,0.50);
+	width: 100%;
+	z-index: 1000;
+    height: 150px;
+	transition: 0.3s all ease;
+}
+#header.shrink {
+	height: 100px;
+	line-height: 0;
+	background:#fff;
+	box-shadow: 1px 0 20px -4px rgba(0,0,0,0.4);
+	transition: 0.3s all ease;
+	}
+#header.shrink img {
+	width: 200px;
+	height: 50px;
+	margin: 25px 0 25px 22px;
+	transition: all 0.3s;
+}
+#header.shrink a {
+	padding: 38px;
+}
+.logo img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 200px;
+	height: 60px;
+	margin: 45px 0 45px 22px;
+	transition: all 0.3s;
+}	
+	
+	
+	
+/* navigation stilizovanje */
+	
+#navigation {
+	float: right;
+}
+#nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-align: center;
+}
+#nav ul li {
+	float: left;
+}
+#nav ul li a {
+	display: block;
+	padding: 63px;
+	font-size: 24px;
+	line-height: 24px;
+	color: #000;
+	text-decoration: none;
+	transition: .5s all ease;
+}
+#nav ul li a:hover {
+	transform: translateY(-15px);
+	color: rgba(33,41,188,1.00);
+}
+#header .fas {
+		display: none;
+	}
+	
+	
+	
+/* content1 stilizovanje */
+	
+#content1 h1, #content1 p {
+	text-align: center;
+}
+#content1 p {
+	text-align: justify;
+}
+#content1 {
+	margin-bottom: 15px;
+}
+
+
+
+/* content2 stilizovanje */
+
+#content2 {
+	background-image: url(../slike/belgradefromair.jpg);
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	padding: 250px 0;
+}
+#content2 .hero {
+	color: #fff;
+	text-align: center;
+	font-weight: bold;
+}
+#content2 .hero h1 {
+	margin-bottom: 0;
+	font-size: 65px;
+}
+
+
+
+/* content3 stilizovanje */
+
+#content3 h1, #content3 p {
+	text-align: center;
+}
+#content3 p {
+	margin-bottom: 150px;
+	text-align: justify;
+}
+#content3 {
+	margin-top: 15px;
+}
+
+
+
+#gornje-slike {
+	margin: 0 130px 40px 130px;
+}
+#donje-slike {
+	margin: 0 130px;
+}
+.slika-gornja-levo, .slika-gornja-desno, .slika-donja-levo, .slika-donja-desno {
+	width: 450px;
+	height: 450px;
+	position: relative;
+	transition: 0.3s all ease;
+	overflow: hidden;
+}
+.slika-gornja-desno, .slika-donja-desno {
+	float: right;
+}
+.slika-gornja-levo h2, .slika-gornja-desno h2, .slika-donja-levo h2, .slika-donja-desno h2 {
+	margin: 0;
+	color: #fff;
+}
+.gornja-levo-text, .gornja-desno-text, .donja-levo-text, .donja-desno-text {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	padding: 209px 0;
+	box-sizing: border-box;
+	opacity: 0;
+	transition: 0.3s all ease;
+}
+.slika-gornja-levo img, .slika-gornja-desno img, .slika-donja-levo img, .slika-donja-desno img {
+	width: 100%;
+	height: 100%;
+	transition: 0.5s all ease;
+}
+.slika-gornja-levo:hover img, .slika-gornja-desno:hover img, .slika-donja-levo:hover img, .slika-donja-desno:hover img {
+	transform: scale(1.2);
+}
+.slika-gornja-levo:hover .gornja-levo-text, 
+.slika-gornja-desno:hover .gornja-desno-text,
+.slika-donja-levo:hover .donja-levo-text, 
+.slika-donja-desno:hover .donja-desno-text {
+	background: rgba(0,0,0,0.30);
+	opacity: 1;
+}
+.slika-gornja-levo:hover, .slika-gornja-desno:hover, .slika-donja-levo:hover, .slika-donja-desno:hover {
+	transform: translateY(-20px);
+	box-shadow: 0px 46px 55px -50px black;
+}
+
+
+
+/* content4 stilizovanje */
+
+#content4 .mar-remove {
+	padding-top: 0px
+}
+#content4 h1, #content4 p {
+	text-align: center;
+}
+#content4 p {
+	margin-bottom: 120px;
+	text-align: justify;
+}
+.paragraf {
+	width: 500px;
+	float: right;
+	margin-top: 65px;
+}
+#content4 img {
+	margin-bottom: 80px;
+	transition: 0.5s all ease;
+}
+#content4 img:nth-of-type(3) {
+	margin-bottom: 0;
+}
+.paragraf2 {
+	width: 500px;
+	float: right;
+	margin-top: 110px;
+}
+#content4 img:hover {
+	transform: translateY(-20px);
+	box-shadow: 0px 46px 55px -50px black;
+}
+
+
+
+/* content5 stilizovanje */
+
+#content5 .mar-remove {
+	padding-top: 0px;
+}
+#content5 h1 {
+	text-align: center;
+}
+#content5 img {
+	transition: 0.5s all ease;
+	margin-bottom: 120px;
+}
+#content5 img:hover {
+	transform: translateY(-20px);
+	box-shadow: 0px 46px 55px -50px black;
+}
+#content5 p {
+	margin-bottom: 120px;
+	margin-top: 0;
+	text-align: justify;
+}
+#content5 .move {
+	float: right;
+	margin-bottom: 50px;
+	margin-top: 20px;
+}
+#content5 .move2 {
+	margin-bottom: 0;
+	margin-top: 20px;
+	float: left;
+}#content5 .mar {
+	margin: 0;
+}
+#overflow {
+	overflow: hidden;
+}
+
+
+
+/* content6 stilizovanje */
+
+#content6 .mar-remove {
+	padding-top: 0px;
+}
+#content6 h1 {
+	text-align: center;
+}
+#content6 p {
+	text-align: justify;
+}
+.paragraf3, .paragraf4 {
+	width: 650px;
+	float: left;
+}
+.paragraf3 {
+	margin: 200px 50px 0 0;
+}
+#content6 img {
+	transition: 0.5s all ease;
+	margin-bottom: 120px;
+}
+#content6 .move3 {
+	margin-bottom: 0;
+}
+#content6 img:hover {
+	transform: translateY(-20px);
+	box-shadow: 0px 46px 55px -50px black;
+}
+.paragraf4 {
+	margin: 80px 50px 0 0;
+}
+
+
+
+/* content7 stilizovanje */
+
+#content7 .mar-remove {
+	padding-top: 0px;
+}
+#content7 h1 {
+	text-align: center;
+}
+#content7 p {
+	text-align: justify;
+}
+#content7 img {
+	margin-top: 120px;
+	margin-bottom: 50px;
+	transition: 0.5s all ease;
+}
+#content7 .move4, #content7 .move5 {
+	margin: 0;
+}
+#content7 .move4 {
+	margin-right: 45px;
+}
+#content7 img:hover {
+	transform: translateY(-20px);
+	box-shadow: 0px 46px 55px -50px black;
+}
+
+
+
+/* content8 stilizovanje */
+
+#content8 .mar-remove {
+	padding-top: 0px;
+}
+#content8 h1 {
+	text-align: center;
+}
+.paragraf5 {
+	width: 550px;
+	height: 450px;
+	float: right;
+	text-align: left;
+}
+
+
+
+/* footer stilizovanje */
+
+#footer {
+	clear: both;
+	text-align: center;
+}
+#footer .mar-remove {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+.footer-content {
+	border-top: 2px solid #222db2;
+	padding-top: 50px;
+	padding-bottom: 20px;
+}
+.footer-content img {
+	width: 200px;
+	height: 60px;
+	margin-bottom: 70px;
+	margin-right: 1px;
+}
+#links {
+	width: 292px;
+	margin: 0 454px 0 454px;
+}
+.footer-content a {
+	display: inline-block;
+	list-style: none;
+	text-decoration: none;
+	padding: 15px;
+	margin-right: 60px;
+	margin-bottom: 30px;
+	color: #fff;
+	border-radius: 50%;
+	transition: 0.5s all ease;
+}
+#footer p {
+	text-align: center;
+	margin-bottom: 0;
+}
+.footer-content a:nth-of-type(3) {
+	margin-right: 0;
+}
+.fab {
+	font-size: 25px;
+}
+.face {
+	width: 25px;
+	background: #3b5999;
+}
+.face:hover {
+	background: #31497d;
+}
+.insta {
+	background: #e4405f;
+}
+.insta:hover {
+	background: #c83853;
+}
+.twit {
+	background: #55acee;
+}
+.twit:hover {
+	background: #4792cb;
+}
+.fa-facebook-f {
+	margin-left: 1px;
+	font-size: 25px;
+}
+.fa-instagram {
+	padding: 1px;
+}
+.footer-content a:hover {
+	transform: translateY(-15px);
+}
+
+
+
+/* RESPONSIVE */
+
+@media screen and (min-width: 800px) and (max-width: 1260px) {
+	.wrapper,.wrapper2 {
+		width: 750px;
+	}
+	#header {
+		height: 100px;
+	}
+	.logo img {
+		height: 50px;
+		margin: 25px 0 25px 22px;
+	}
+	#navigation ul li a {
+		padding: 38px;
+	}
+	#header .fas {
+		display: none;
+	}
+	#wrap video {
+		max-width: 100%;
+	}
+	#content2 {
+		background-position:  right center;
+	}
+	.slika-gornja-desno, .slika-gornja-levo {
+		width: 300px;
+		height: 300px;
+	}
+	.gornja-levo-text h2, .gornja-desno-text h2, .donja-levo-text h2, .donja-desno-text h2 {
+		font-size: 22px; 
+	}
+	.gornja-levo-text, .gornja-desno-text, .donja-levo-text, .donja-desno-text {
+		padding: 136px 0;
+	}
+	.slika-donja-desno, .slika-donja-levo {
+		width: 300px;
+		height: 300px;
+	}
+	#gornje-slike {
+		margin: 0 60px 30px 60px;
+	}
+	#donje-slike {
+		margin: 0 60px;
+	}
+	#content4 img {
+		width: 100%;
+	}
+	#content4 p {
+		margin-bottom: 80px;
+		width: 750px;
+	}
+	#content4 p, #content4 .paragraf {
+		margin-top: 0;
+	}
+	#content4 .paragraf {
+		width: 100%;
+		float: none;
+	}
+	.paragraf2 {
+		margin-top: 0;
+		width: auto;
+		float: none;
+	}
+	#content5 .full-width {
+		width: 100%;
+		margin-bottom: 80px;
+	}
+	#content5 p {
+		margin-bottom: 80px;
+	}
+	#overflow .move2 {
+		margin: 0 125px;
+		width: auto;
+		float: none;
+	}
+	#overflow .move {
+		float: none;
+		margin: 30px 0 30px 0;
+		width: 100%;
+	}
+	#overflow .mar {
+		margin: 0;
+	}
+	.paragraf3 {
+		margin: 0 0 80px;
+		width: 750px;
+	}
+	.paragraf3 p {
+		margin: 0;
+	}
+	#content6 .full-width2 {
+		margin: 0 125px;
+	}
+	#content6 .paragraf4 {
+		width: 750px;
+		float: none;
+		margin: 80px 0;
+	}
+	#content6 .move3 {
+		margin: 0 125px;
+		width: auto;
+		float: none;
+	}
+	#content7 img {
+		width: 100%;
+	}
+	#content7 .full-width3 {
+		margin: 60px 0 30px;
+	}
+	#content7 .move4 {
+		margin: 0 0 30px;
+	}
+	.mapa {
+		height: auto;
+	}
+	iframe {
+		width: 100%;
+	}
+	.paragraf5 {
+		float: none;
+		margin-top: 60px;
+		height: 176px;
+	}
+	#links {
+		margin: 0 0 0 229px;
+	}
+	.footer-content {
+		padding-bottom: 20px;
+	}
+	.footer-content p {
+		margin-bottom: 0;
+	}
+}
+
+
+
+
+
+
+@media screen and (min-width: 0) and (max-width: 799px) {
+	.wrapper,.wrapper2 {
+		width: 320px;
+	}
+	#header {
+		height: 70px;
+	}
+	.logo img {
+		width: 100px;
+		height: 40px;
+		margin: 15px 0 15px 22px;
+		transition: all 0.3s;
+	}
+	#header.shrink {
+		height: 70px;
+	}
+	#header.shrink img {
+		width: 100px;
+		height: 40px;
+		margin: 15px 0 15px 22px;
+		transition: all 0.3s;
+	}
+	#wrap video {
+		max-width: 100%;
+	}
+	h1 {
+		font-size: 28px;
+	}
+	#content2 {
+		background-position: center right;
+		background-size: cover;
+		max-width: 100%;
+	}
+	#content2 .hero h1 {
+		font-size: 40px;
+		margin: 0;
+	}
+	.gornja-levo-text h2, .gornja-desno-text h2, .donja-levo-text h2, .donja-desno-text h2 {
+		font-size: 22px;
+	}
+	.gornja-levo-text, .gornja-desno-text, .donja-levo-text, .donja-desno-text {
+		padding: 146px 0;
+	}
+	#navigation, #nav {
+		float: none;
+	}
+	#navigation {
+		position: relative;
+		top: 70px;
+		width: auto;
+		height: auto;
+	}
+	#navigation ul {
+		display: none;
+	}
+	#navigation ul li {
+		float: none;
+		background: rgba(255,255,255,0.7);
+	}
+	#header .fas {
+		float: right;
+		font-size: 30px;
+		margin: 14px 22px 14px 0;
+		color: #222db2;
+		display: block; 
+		border: 1px solid #222db2;
+		padding: 5px;
+		border-radius: 5px;
+	}
+	#gornje-slike {
+		margin: 0 0 30px;
+	}
+	.slika-gornja-desno, .slika-gornja-levo {
+		width: 320px;
+		height: 320px;
+	}
+	.slika-gornja-desno {
+		margin-bottom: 30px;
+	}
+	#donje-slike {
+		margin: 0;
+	}
+	.slika-donja-desno, .slika-donja-levo {
+		width: 320px;
+		height: 320px;
+	}
+	.slika-donja-desno {
+		margin-bottom: 30px;
+	}
+	#content4 img {
+		width: 100%;
+	}
+	#content4 p {
+		margin-bottom: 80px;
+		width: 320px;
+	}
+	#content4 p, #content4 .paragraf {
+		margin-top: 0;
+	}
+	#content4 .paragraf {
+		width: 100%;
+		float: none;
+	}
+	.paragraf2 {
+		margin-top: 0;
+		width: auto;
+		float: none;
+	}
+	#content5 .full-width {
+		width: 100%;
+		margin-bottom: 80px;
+	}
+	#content5 p {
+		margin-bottom: 80px;
+	}
+	#overflow .move2 {
+		margin: 0;
+		width: auto;
+		float: none;
+	}
+	#overflow .move {
+		float: none;
+		margin-top: 30px;
+		margin-bottom: 0;
+		width: 100%;
+	}
+	#overflow .mar {
+		margin-top: 30px;
+	}
+	.paragraf3 {
+		margin: 0 0 80px;
+		width: 320px;
+	}
+	.paragraf3 p {
+		margin: 0;
+	}
+	#content6 .full-width2 {
+		margin: 0;
+	}
+	.full-width2 {
+		width: 320px;
+	}
+	#content6 .paragraf4 {
+		width: 320px;
+		float: none;
+		margin: 80px 0;
+	}
+	#content6 .move3 {
+		margin: 0;
+		width: 320px;
+		float: none;
+	}
+	#content7 img {
+		width: 100%;
+	}
+	#content7 .full-width3 {
+		margin: 60px 0 30px;
+	}
+	#content7 .move4 {
+		margin: 0 0 30px;
+	}
+	.mapa {
+		height: auto;
+	}
+	iframe {
+		width: 100%;
+	}
+	.paragraf5 {
+		float: none;
+		margin-top: 60px;
+		height: 176px;
+		width: 320px;
+	}
+	#links {
+		margin: 0 14px;
+	}
+	.footer-content {
+		padding-bottom: 20px;
+	}
+	.footer-content p {
+		margin-bottom: 0;
+	}
+}
+@media screen and (max-width: 380px) {
+	.wrapper,.wrapper2 {
+		width: 300px;
+	}
+	h1 {
+		font-size: 28px;
+	}
+	#content2 {
+		padding: 200px 0;
+	}
+	#content2 {
+		background-position: center center;
+	}
+	#content2 .hero h1 {
+		font-size: 28px;
+		margin: 0;
+	}
+	.gornja-levo-text h2, .gornja-desno-text h2, .donja-levo-text h2, .donja-desno-text h2 {
+		font-size: 18px; 
+	}
+	.gornja-levo-text, .gornja-desno-text, .donja-levo-text, .donja-desno-text {
+		padding: 138px 0;
+	}
+	.slika-gornja-desno, .slika-gornja-levo, .slika-donja-desno, .slika-donja-levo {
+		width: 300px;
+		height: 300px;
+	}
+	#content4 p {
+		width: auto;
+	}
+	#content6 .paragraf3, #content6 .paragraf4 {
+		width: auto;
+	}
+	.full-width2 {
+		width: 100%;
+	}
+	#content6 .move3 {
+		width: 100%;
+	}
+	#links {
+		margin: 0 4px;
+	}
+}
+
+
+@media screen and (max-width: 360px) {
+	.wrapper,.wrapper2 {
+		width: 260px;
+	}
+	h1 {
+		font-size: 28px;
+	}
+	#content2 .hero h1 {
+		font-size: 28px;
+		margin: 0;
+	}
+	.gornja-levo-text h2, .gornja-desno-text h2, .donja-levo-text h2, .donja-desno-text h2 {
+		font-size: 18px; 
+	}
+	.gornja-levo-text, .gornja-desno-text, .donja-levo-text, .donja-desno-text {
+		padding: 118px 0;
+	}
+	.slika-gornja-desno, .slika-gornja-levo {
+		width: 260px;
+		height: 260px;
+	}
+	.slika-donja-desno, .slika-donja-levo {
+		width: 260px;
+		height: 260px;
+	}
+	#content5 .move2 {
+		width: 100%;
+	}
+	#content8 .paragraf5 {
+		width: auto;
+	}
+	#links {
+		margin: 0;
+		width: auto;
+		float: none;
+	}
+	.footer-content a {
+		margin-right: 30px;
+	}
+}
